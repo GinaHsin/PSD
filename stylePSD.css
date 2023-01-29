@@ -1,0 +1,286 @@
+﻿/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+h1{
+    color: blue;
+    font-size: 20px;
+}
+
+/**{
+	outline: 1px solid black;
+}*/
+*, *::before, *::after{
+	box-sizing: border-box;
+}
+.wrap{
+	width: 1001px;
+	margin: 0 auto;
+}
+.clearfix{
+	clear: both;
+}
+/*最上面fb與twitter的連結*/
+.bar{
+	background-color: #f6f6f6;
+	padding: 5px 12px;
+}
+.bar ul{
+	float: right;
+}
+.bar li{
+	float: left;
+}
+.bar img{
+	float: left;
+	margin-right: 2px;
+}
+.fb span{
+	color: #4460a0;
+	border-right: 1px solid #cccccc;
+	padding-right: 5px;
+	margin-right: 5px;
+}
+.twitter span{
+	color: #3fb5ed;
+}
+.bar a{
+	text-decoration: none;
+}
+.fb a:hover{
+	text-decoration: underline;
+	color: #4460a0;
+}
+.twitter a:hover{
+	text-decoration: underline;
+	color: #3fb5ed;
+}
+/*表頭*/
+.header h1 a{
+	background-image: url(images/HexSchool.png);
+    width: 171px;
+	height: 36px;
+	margin: 8px 0 8px 20px;
+	display: block;
+	text-indent: 108%;
+	white-space: nowrap;
+    overflow: hidden;
+	float: left;
+}
+.header ul{
+	float: right;
+}
+.header li{
+	float: left;
+	margin: 17px 20px 20px 0;
+}
+.header li a{
+	color: #00cc99;
+    text-decoration: none;
+	padding: 0 11px 17px;
+}
+.header li a:hover{
+	border-bottom: 3px solid #00cc99;
+}
+.header li a:focus{
+	color: purple;
+	border-bottom: 3px solid purple;
+}
+/*"六角學院，讓您奠定良好的前端基礎"，標題與圖的設定。*/
+.banner{
+	background-image: url(images/使用html做網站-_03.png);
+	width: 1001px;
+	height: 346px;
+}
+/*表中：HTML 5基礎教學，響應式網站設計，jQuery實戰教學介紹*/
+.content{
+	padding: 62px 19px;
+}
+.box-html5, .box-RWD, .box-jQuery{
+	width: 300px;
+	float: left;
+	text-align: center;
+	padding: 0 19px 24px;
+	box-shadow: 0px 4px 5px #dbdbdb;
+}
+.box-html5, .box-RWD{
+	margin-right: 28px;
+}
+.box-html5 img{
+    margin: 24px 0 13px;
+}
+.box-RWD img{
+	margin: 43px 0 48px;
+}
+.box-jQuery img{
+	margin: 32px 0 22px;
+}
+.content h3{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 13px;
+}
+.content p, .box-jQuery h4, .box-jQuery li{	
+	font-size: 15px;
+	line-height: 1.5;
+	text-align: left;
+}
+.box-jQuery ul{
+	list-style-type: disc;
+	margin-left: 15px;
+}
+/*表中：線上與實體課程的差異*/
+.table{
+	padding: 62px 82px;
+}
+.table h3{
+	font-size: 25px;
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.table th{
+	font-weight: 600;
+	text-align: left;
+	background-color: #f7f7f7;
+	padding: 10px 100px 10px 25px;
+	border-top: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
+.table td{
+	padding: 10px 0 10px 25px;
+    border-bottom: 1px solid #dddddd;
+}
+.mark{
+	color: #00cc99;
+}
+/*表中：留下學員資料*/
+.student{
+	background-image: url(images/bg2.png);
+	padding: 30px 20px;
+}
+.student h3{
+	color: #ffffff;
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 1.5;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.student form{
+	display: flex;
+}
+.student textarea{
+	width: 460px; 
+	resize: none;
+	margin-right: 40px;
+}
+.student div{
+	width: 460px;
+	padding-bottom: 30px;
+	position: relative;
+}
+.student label, .button{
+	color: #ffffff;
+}
+.Text{
+	padding: 8px 0;
+	margin: 3px 0 15px;
+	display: block;
+	width: 460px;
+}
+.button{
+	width: 70px;
+	padding: 5px 0;
+	background-color: #00cc99;
+	font-size: 15px;
+    position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.Text:focus{
+	border: 3px solid #cccccc;
+}
+.button:hover{
+	border-radius: 20px;
+}
+/*表尾*/
+.footer{
+	padding: 26px 15px 55px 21px;
+}
+.footer h2{
+	float: left;
+}
+.footer h2 a{
+	background-image: url(images/使用html做網站-_19.png);
+	width: 170px;
+	height: 36px;
+	display: block;
+	text-indent: 101%;
+    white-space: nowrap;
+	overflow: hidden;
+}
+.footer ul{
+	float: right;
+}
+.footer li{
+	line-height: 1.5;
+}
+.footer span{
+	color: #5d5d5d;
+}
+.footer li a{
+	color: #e12d80;
+	text-decoration: none;
+}
+.footer li a:hover{
+	text-decoration: underline;
+}
+.footer li a:focus{
+	color: purple;
+	border-bottom: 1px solid purple;
+}
