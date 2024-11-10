@@ -51,56 +51,51 @@ h1{
     font-size: 20px;
 }
 
-/**{
-	outline: 1px solid black;
-}*/
 *, *::before, *::after{
 	box-sizing: border-box;
+	outline: 1px solid black;
 }
 .wrap{
 	width: 1001px;
 	margin: 0 auto;
 }
-.clearfix{
+/*.clearfix{
 	clear: both;
-}
+}*/
 /*最上面fb與twitter的連結*/
-.bar{
+.link-bar{
 	background-color: #f6f6f6;
-	padding: 5px 12px;
+	display: flex;
+	justify-content: end;
+	margin: 5px 14px 5px 0;
 }
-.bar ul{
-	float: right;
+.link-bar a{
+	text-decoration: none;
 }
-.bar li{
+.link-bar a:hover{
+	text-decoration: underline;
+}
+.link-bar img{
 	float: left;
-}
-.bar img{
-	float: left;
-	margin-right: 2px;
 }
 .fb span{
 	color: #4460a0;
 	border-right: 1px solid #cccccc;
-	padding-right: 5px;
-	margin-right: 5px;
+	padding-right: 8px;
 }
 .twitter span{
 	color: #3fb5ed;
 }
-.bar a{
-	text-decoration: none;
+.twitter img{
+	padding-left: 8px;
 }
-.fb a:hover{
-	text-decoration: underline;
-	color: #4460a0;
-}
-.twitter a:hover{
-	text-decoration: underline;
-	color: #3fb5ed;
-}
+
 /*表頭*/
-.header h1 a{
+.header{
+	display: flex;
+	justify-content: space-between;
+}
+h1 a{
 	background-image: url(images/HexSchool.png);
     width: 171px;
 	height: 36px;
@@ -109,81 +104,104 @@ h1{
 	text-indent: 108%;
 	white-space: nowrap;
     overflow: hidden;
-	float: left;
 }
-.header ul{
-	float: right;
+.navbar{
+	display: flex;
+	margin-top: 17px;
+	margin-right: 9px;
 }
-.header li{
-	float: left;
-	margin: 17px 20px 20px 0;
+.navbar>li{
+	margin-right: 25px;
+	position: relative;
 }
-.header li a{
+.navbar>li:last-of-type{
+	margin-right: 0;
+}
+.navbar-link, .dropmenu a{
+	display: block;
 	color: #00cc99;
     text-decoration: none;
-	padding: 0 11px 17px;
 }
-.header li a:hover{
+.navbar-link{
+	padding: 0px 11px 17px 11px;
+}
+.dropmenu{
+	display: none;
+	position: absolute;
+	z-index: 2;
+}
+.dropmenu a{
+	width: 86px;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	background-color: #ffffff;
+	text-align: center;
+}
+.navbar-link:hover, .dropdown a:hover{
 	border-bottom: 3px solid #00cc99;
 }
-.header li a:focus{
+.navbar-link:focus, .dropdown a:focus{
 	color: purple;
 	border-bottom: 3px solid purple;
 }
-/*"六角學院，讓您奠定良好的前端基礎"，標題與圖的設定。*/
-.banner{
-	background-image: url(images/使用html做網站-_03.png);
+
+/*"六角學院，讓您奠定良好的前端基礎"，banner的swiper設定*/
+/*.swiper, .swiper-slide img{
 	width: 1001px;
 	height: 346px;
-}
+}*/
 /*表中：HTML 5基礎教學，響應式網站設計，jQuery實戰教學介紹*/
-.content{
+.content-courses{
 	padding: 62px 19px;
+	display: flex;
+	justify-content: space-between;
 }
-.box-html5, .box-RWD, .box-jQuery{
+.col-html5, .col-RWD, .col-jQuery{
 	width: 300px;
-	float: left;
 	text-align: center;
 	padding: 0 19px 24px;
 	box-shadow: 0px 4px 5px #dbdbdb;
 }
-.box-html5, .box-RWD{
+.col-html5, .col-RWD{
 	margin-right: 28px;
 }
-.box-html5 img{
+.col-html5 img{
     margin: 24px 0 13px;
 }
-.box-RWD img{
+.col-RWD img{
 	margin: 43px 0 48px;
 }
-.box-jQuery img{
+.col-jQuery img{
 	margin: 32px 0 22px;
 }
-.content h3{
+.content-courses h3{
 	font-size: 20px;
 	font-weight: 600;
 	margin-bottom: 13px;
 }
-.content p, .box-jQuery h4, .box-jQuery li{	
+.content-courses p, .col-jQuery h4, .col-jQuery li{	
 	font-size: 15px;
 	line-height: 1.5;
 	text-align: left;
 }
-.box-jQuery ul{
+.col-jQuery ul{
 	list-style-type: disc;
 	margin-left: 15px;
 }
+.lightboxOverlay {
+	background-color: #00cc99;
+  }
 /*表中：線上與實體課程的差異*/
-.table{
+.content-list{
 	padding: 62px 82px;
 }
-.table h3{
+.content-list h3{
 	font-size: 25px;
 	font-weight: 600;
 	text-align: center;
 	margin-bottom: 30px;
 }
-.table th{
+.content-list th{
 	font-weight: 600;
 	text-align: left;
 	background-color: #f7f7f7;
@@ -191,19 +209,19 @@ h1{
 	border-top: 1px solid #dddddd;
 	border-bottom: 1px solid #dddddd;
 }
-.table td{
+.content-list td{
 	padding: 10px 0 10px 25px;
     border-bottom: 1px solid #dddddd;
 }
-.mark{
+.accent{
 	color: #00cc99;
 }
 /*表中：留下學員資料*/
-.student{
+.content-msg{
 	background-image: url(images/bg2.png);
 	padding: 30px 20px;
 }
-.student h3{
+.content-msg h3{
 	color: #ffffff;
 	font-size: 25px;
 	font-weight: 600;
@@ -211,27 +229,30 @@ h1{
 	text-align: center;
 	margin-bottom: 20px;
 }
-.student form{
+.content-msg form{
 	display: flex;
 }
-.student textarea{
+.content-msg textarea{
 	width: 460px; 
 	resize: none;
 	margin-right: 40px;
 }
-.student div{
+.content-msg div{
 	width: 460px;
 	padding-bottom: 30px;
 	position: relative;
 }
-.student label, .button{
+.content-msg label, .button{
 	color: #ffffff;
 }
-.Text{
-	padding: 8px 0;
+.input-msg{
+	padding: 8px;
 	margin: 3px 0 15px;
 	display: block;
 	width: 460px;
+}
+.input-msg:focus{
+	border: 3px solid #cccccc;
 }
 .button{
 	width: 70px;
@@ -242,20 +263,16 @@ h1{
 	right: 0;
 	bottom: 0;
 }
-.Text:focus{
-	border: 3px solid #cccccc;
-}
 .button:hover{
 	border-radius: 20px;
 }
 /*表尾*/
 .footer{
 	padding: 26px 15px 55px 21px;
+	display: flex;
+	justify-content: space-between;
 }
-.footer h2{
-	float: left;
-}
-.footer h2 a{
+h2 a{
 	background-image: url(images/使用html做網站-_19.png);
 	width: 170px;
 	height: 36px;
@@ -263,9 +280,6 @@ h1{
 	text-indent: 101%;
     white-space: nowrap;
 	overflow: hidden;
-}
-.footer ul{
-	float: right;
 }
 .footer li{
 	line-height: 1.5;
@@ -283,4 +297,10 @@ h1{
 .footer li a:focus{
 	color: purple;
 	border-bottom: 1px solid purple;
+}
+/**/
+.top-arrow{
+	position: fixed;
+	right: 0;
+	bottom: 0;
 }

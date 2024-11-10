@@ -13,65 +13,94 @@
     <meta property="og:description" content="六角學院的粉絲團，裡面有一些討論內容。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.facebook.com/hexschool">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="stylePSD.css" />
 </head>
 <body>
     <div class="wrap">
         <!--最上面fb與twitter的連結-->
-        <div class="bar">
-            <ul>
-                <li class="fb"><a href="https://www.facebook.com/hexschool/" target="_blank">
+        <ul class="link-bar">
+            <li class="fb">
+                <a href="https://www.facebook.com/hexschool/" target="_blank">
                     <img src="images/fb_03.png" alt="facebook logo">
                     <span>粉絲團</span>
-                 </a></li>
-                <li class="twitter"><a href="https://twitter.com/hexschool1" target="_blank">
+                </a>
+            </li>
+            <li class="twitter">
+                <a href="https://twitter.com/hexschool1" target="_blank">
                     <img src="images/twitter_06.png" alt="twitter logo">
                     <span>追隨我們</span>
-                 </a></li> 
-            </ul>
-            <div class="clearfix"></div>
-        </div>
+                </a>
+            </li> 
+        </ul>
         <!--表頭-->
         <div class="header">
             <h1><a href="#">六角學院</a></h1>
-            <ul>
-                <li><a href="#">首頁</a></li>
-                <li><a href="#">產品介紹</a></li>
-                <li><a href="#">聯絡我們</a></li>
+            <ul class="navbar">
+                <li><a href="#" class="navbar-link">首頁</a></li>
+                <li>
+                    <a href="#" class="navbar-link">產品介紹</a>
+                    <ul class="dropmenu">
+                        <li><a href="#">課程</a></li>
+                        <li><a href="#">問答</a></li>>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="navbar-link">聯絡我們</a>
+                    <ul class="dropmenu">
+                        <li><a href="#">關於我們</a></li>
+                        <li><a href="#">如何聯絡</a></li>
+                    </ul>
+                </li>
             </ul>
-            <div class="clearfix"></div>
         </div>
-        <!--"六角學院，讓您奠定良好的前端基礎"，標題與圖的設定-->
-        <h2 class="banner">
-            六角學院<br>讓您奠定良好的前端基礎
-        </h2>
+        <!--"六角學院，讓您奠定良好的前端基礎"，banner的swiper設定-->
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/使用html做網站-_03.png" alt="六角學院帶你奠定良好的前端基礎"></div>
+                <div class="swiper-slide"><img src="images/indexBanner.png" alt="歡迎來到六角學院，帶你一起攻略前端設計"></div>
+                <div class="swiper-slide"><img src="images/coursesBanner.png" alt="HTML、CSS，從無到有學會網頁設計"></div>
+                <div class="swiper-slide"><img src="images/questionsBanner.png" alt="遇到問題了嗎？別擔心，你想找的答案都在這裡"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-scrollbar"></div>
+        </div>
         <!--表中：HTML 5基礎教學，響應式網站設計，jQuery實戰教學介紹-->
-        <ul class="content">
-            <li class="box-html5">
-                <img src="images/使用html做網站-_07.png" alt="S logo">
+        <ul class="content-courses">
+            <li class="col-html5">
+                <a href="images/使用html做網站-_07.png" data-lightbox="photo-courses">
+                    <img src="images/使用html做網站-_07.png" alt="computer logo">
+                </a>
                 <h3>Html 5 基礎教學</h3>
                 <p>主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式教學，而是透過實際的範例，瞭解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
             </li>
-            <li class="box-RWD">
-                <img src="images/使用html做網站-_13.png" alt="computer logo">
-                <h3>響應式網站設計</h3>
-                <p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。</p>
+            <li class="col-RWD">
+                <a href="images/使用html做網站-_13.png" data-lightbox="photo-courses">
+                    <img src="images/使用html做網站-_13.png" alt="computer logo">
+                </a>
+                    <h3>響應式網站設計</h3>
+                    <p>響應式網站設計(Responsive web design)，目前大多使用者均是以手機瀏覽的情況下，響應式網站已經是必備的。六角學院將會提供業界響應式開發方法，讓學生瞭解行動版開發技巧。</p>
             </li>
-            <li class="box-jQuery">
-                <img src="images/使用html做網站-_10.png" alt="jQuery logo">
-                <h3>jQuery 實戰教學</h3>
-                <h4>本課程有以下特色</h4>
-                <ul>
-                    <li>瞭解變數的使用方法</li>
-                    <li>學習並操作DOM</li>
-                    <li>學習基本數學運算方法</li>
-                    <li>套件的操作及運用</li>
-                </ul>
+            <li class="col-jQuery">
+                <a href="images/使用html做網站-_10.png" data-lightbox="photo-courses">
+                    <img src="images/使用html做網站-_10.png" alt="jQuery logo">
+                </a>
+                    <h3>jQuery 實戰教學</h3>
+                    <h4>本課程有以下特色</h4>
+                    <ul>
+                        <li>瞭解變數的使用方法</li>
+                        <li>學習並操作DOM</li>
+                        <li>學習基本數學運算方法</li>
+                        <li>套件的操作及運用</li>
+                    </ul>
             </li>
-            <div class="clearfix"></div>
         </ul>
         <!--表中：線上與實體課程的差異-->
-        <div class="table">
+        <div class="content-list">
             <h3>線上及實體課程的差異</h3>
             <table>
                 <tr>
@@ -82,44 +111,44 @@
                 </tr>
                 <tr>
                     <td>費用</td>
-                    <td class="mark">較低</td>
-                    <td class="mark">較低</td>
+                    <td class="accent">較低</td>
+                    <td class="accent">較低</td>
                     <td>較高</td>
                 </tr>
                 <tr>
                     <td>學習效果</td>
                     <td>一般</td>
-                    <td class="mark">較低</td>
-                    <td class="mark">很好</td>
+                    <td class="accent">較低</td>
+                    <td class="accent">很好</td>
                 </tr>
                 <tr>
                     <td>Code review</td>
-                    <td class="mark">有</td>
+                    <td class="accent">有</td>
                     <td>無</td>
                     <td>不一定</td>
                 </tr>
                 <tr>
                     <td>課程更新速度</td>
-                    <td class="mark">普通</td>
-                    <td class="mark">普通</td>
+                    <td class="accent">普通</td>
+                    <td class="accent">普通</td>
                     <td>較慢</td>
                 </tr>
                 <tr>
                     <td>多次複習</td>
-                    <td class="mark">可</td>
+                    <td class="accent">可</td>
                     <td>可</td>
                     <td>不可</td>
                 </tr>
                 <tr>
                     <td>字幕</td>
-                    <td class="mark">有</td>
+                    <td class="accent">有</td>
                     <td>不一定</td>
                     <td>版書</td>
                 </tr>
-            </table>
+            </table>       
         </div>
         <!--表中：留下學員資料-->
-        <div class="student">
+        <div class="content-msg">
             <h3>
                 對我們課程有興趣嗎?<br>
                 歡迎留下您的資料
@@ -128,11 +157,11 @@
                 <textarea name="message"></textarea>
                 <div>
                     <label for="Name">姓名</label>
-                    <input class="Text" type="text" id="Name" name="Name" placeholder="請輸入姓名">
+                    <input class="input-msg" type="text" id="Name" name="Name" placeholder="請輸入姓名">
                     <label for="tel">電話</label>
-                    <input class="Text" type="tel" id="tel" name="tel" placeholder="請輸入電話">
+                    <input class="input-msg" type="tel" id="tel" name="tel" placeholder="請輸入電話">
                     <label for="email">信箱</label>
-                    <input class="Text" type="email" id="email" name="email" placeholder="請輸入信箱">
+                    <input class="input-msg" type="email" id="email" name="email" placeholder="請輸入信箱">
                     <input class="button" type="submit" value="送出">
                 </div> 
             </form>
@@ -150,8 +179,14 @@
                    <a href="tel:0999123456">0999123456</a>
                 </li>
            </ul>
-           <div class="clearfix"></div>
+           <!--<div class="clearfix"></div>-->
         </div>
+        <a href="#" class="top-arrow"><img src="images/top-arrow.png" alt="向上的箭頭"></a>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="psd.js"></script>
 </body>
 </html>
