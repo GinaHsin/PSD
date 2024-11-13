@@ -3,7 +3,7 @@ $(document).ready(function(){
     $(".navbar-link").click(function(e) {
         e.preventDefault();
         $(this).siblings().slideToggle();
-        $(this).parent().siblings().find(".dropdown").slideUp();
+        $(this).parent().siblings().find(".dropmenu").slideUp();
     })
     /*在banner做swiper*/
     const swiper = new Swiper(".swiper", {
@@ -14,7 +14,7 @@ $(document).ready(function(){
         },
         navigation: {
          nextEl: ".swiper-button-next",
-         prevEl: "swiper-button-prev"
+         prevEl: ".swiper-button-prev"
         },
         scrollbar: {
          el: ".swiper-scrollbar"
